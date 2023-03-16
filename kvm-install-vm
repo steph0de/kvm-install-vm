@@ -181,6 +181,7 @@ ok() { green "${@:-OK}" ; }
 pushd() { command pushd "$@" >/dev/null ; }
 popd() { command popd "$@" >/dev/null ; }
 
+command -v virt-resize && ok || die "Command virt-resize not found."
 # Join zero or more strings into a delimited string.
 function join ()
 {
